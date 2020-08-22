@@ -1,8 +1,14 @@
-import cv2
+import cv2 as cv
 
-img = cv2.imread("img/me.jpg")
-img = cv2.resize(img, (int(img.shape[1]/4),int(img.shape[0]/4)))
-img = cv2.imshow("Me", img)
+example_img = cv.imread("img/me.jpg")
 
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+def resize(img, factor):
+    this_img = img
+    this_img = cv.resize(this_img, (int(this_img.shape[1]/factor),int(this_img.shape[0]/factor)))
+    cv.imshow("Me", this_img)
+    return this_img
+
+resize(example_img, 4)
+
+cv.waitKey(0)
+cv.destroyAllWindows()

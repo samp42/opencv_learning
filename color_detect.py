@@ -3,6 +3,8 @@ import numpy
 
 def empty(a):
     pass
+#values for stacked_cells.jpg
+#0 179 52 255 0 179
 
 cv.namedWindow("Trackbars")
 cv.resizeWindow("Trackbars",1000,400)
