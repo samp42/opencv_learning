@@ -25,8 +25,11 @@ while True:
     lower = numpy.array([h_min,s_min,v_min])
     upper = numpy.array([h_max,s_max,v_max])
     mask = cv.inRange(img_hsv,lower,upper)
+    result = cv.bitwise_and(img, img, mask=mask)
+    print(h_min,h_max,s_min,s_max,h_min,h_max)
     cv.imshow("HSV", img_hsv)
     cv.imshow("Mask", mask)
+    cv.imshow("Mask Result", result)
     cv.waitKey(1)
 
 cv.destroyAllWindows()
