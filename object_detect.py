@@ -1,5 +1,7 @@
 import cv2 as cv
 
+tracker_types = ['BOOSTING', 'MIL','KCF', 'TLD', 'MEDIANFLOW', 'CSRT', 'MOSSE']
+
 stream = cv.VideoCapture(0)
 #tracker = cv.TrackerMOSSE_create() #TrackerMOSSE is faster but loses target more easily
 tracker = cv.TrackerCSRT_create() #TrackerCSRT is much slower but slightly more reliable
